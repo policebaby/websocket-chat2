@@ -1,6 +1,7 @@
 <template>
   <div class="session-panel-warp">
     <div class="session-panel-header">
+      <!-- .stop 修饰符告诉 Vue 在触发 mousedown 事件后停止事件的传播。这意味着如果有任何父元素也正在监听 mousedown 事件，那么它们不会收到该事件。这可以用来防止事件冒泡。 -->
       <img :src="session.avatarUrl" @mousedown.stop="" alt="" class="session-avatar">
       <span class="session-name">{{session.name}}</span>
       <slot name="info"></slot>
